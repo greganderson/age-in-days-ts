@@ -2,9 +2,10 @@ import React, { useState } from "react";
 
 const Calculator: React.FC = () => {
   const [name, setName] = useState("");
-  const [age, setAge] = useState<number | string>();
+  const [age, setAge] = useState<number | string>("");
 
   const isNumber = (num: string): boolean => /^\d+$/.test(num);
+
 
   const handleAgeChange = (event: React.ChangeEvent<HTMLInputElement>): void => {
     const newAge = event.target.value;
